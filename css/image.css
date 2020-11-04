@@ -1,0 +1,18 @@
+
+.navbar-brand{
+    margin-left: 20px;
+}
+.navbar-nav{
+    margin-right: 20px;
+}
+
+.jumbotron{
+    height: auto;
+}
+.row{
+    margin-top: -35px;
+}
+.img-fluid{
+    width: 350px;
+    height: 350px;
+}

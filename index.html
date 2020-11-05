@@ -7,34 +7,37 @@
 
     <!-- css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/image.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/jumbotron.css">
+    <link rel="stylesheet" href="css/aboutme.css">
 
 </head>
 
 <header>
 
   <!-- navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#">Logo</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link navlink" onclick="" href="#"></i>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About me</a>
+          <a class="nav-link navlink" onclick="openNav(event,'aboutMe')" href="#aboutMe">About me</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Experiences</a>
+            <a class="nav-link navlink" onclick="openNav(event,'experienceMe')" href="#experienceMe">Experiences</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Skills</a>
+            <a class="nav-link navlink" onclick="openNav(event,'skillMe')" href="#skillMe">Skills</a>
           </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link navlink" onclick="openNav(event,'contactMe')" href="#contactMe">Contact</a>
         </li>
       </ul>
     </div>
@@ -45,24 +48,78 @@
 
     <!-- content -->
     <div class="jumbotron">
-        <div class="row">
+        <div class="row row-jumb">
             <div class="col-lg-6">
-                <img src="img/header.png" class="fadeinleft img-fluid rounded mx-auto d-block rounded-circle rounded-sm" alt="Responsive image">
+                <img src="img/header1.png" class="imgheader1 fadeinleft img-fluid rounded mx-auto d-block rounded-sm" alt="Responsive image">
             </div>
             <div class="col-lg-6">
-                <h1 class="display-4">Hello, world!</h1>
-                <p class="lead">This site is a simple website that contains information about myself, my experience, the skills I have learned and some of the projects I've worked on.</p>
+                <h1 id="helloWorld" class="display-4"></h1>
+                <p id="descP" class="lead"></p>
                 <hr class="my-4">
-                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                <a class="btn btn-outline-primary btn-lg" href="#" role="button">Hire me!</a>
+                <p>If you believe in my abilities, and are ready to work with me, please press the button below for more.</p>
+                <a class="btn btn-outline-primary btn-lg" href="https://wa.link/1zhaxh" target="_blank" role="button">Hire me!</a>
             </div>
           </div>
       </div>
 
+      <div class="block"></div>
+
+      <!-- about -->
+      <div id="aboutMe" class="container-fluid aboutme navcontent">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="row-left">About Me</h1>
+                </div>
+                <div class="col-lg-6">
+
+                </div>
+            </div>
+      </div>
+
+      <div class="block"></div>
+
+      <!-- experiences -->
+      <div id="experienceMe" class="container-fluid aboutme navcontent">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="row-left">Experiences</h1>
+                </div>
+                <div class="col-lg-6">
+
+                </div>
+            </div>
+      </div>
+
+      <div class="block"></div>
+
+      <!-- skills -->
+      <div id="skillMe" class="container-fluid aboutme navcontent">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="row-left">Skills</h1>
+                </div>
+                <div class="col-lg-6">
+
+                </div>
+            </div>
+      </div>
+
+      <div class="block"></div>
+
 </body>
 <footer>
 
-    <p>FOOTER</p>
+   <!-- contact -->
+   <div id="contactMe" class="container-fluid aboutme navcontent">
+    <div class="row">
+        <div class="col-lg-6">
+            <h1 class="row-left">Contact</h1>
+        </div>
+        <div class="col-lg-6">
+
+        </div>
+    </div>
+</div>
 
 </footer>
 
@@ -70,5 +127,8 @@
 <script src="js/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/smooth-scrolling.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/typewriter.js"></script>
 
 </html>

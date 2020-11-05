@@ -1,0 +1,12 @@
+
+/* html {
+    scroll-behavior: smooth;
+} */
+
+body{
+    background-color: rgb(255, 217, 182);
+}
+
+.block{
+    height: 200px;
+}

@@ -1,24 +1,22 @@
-
-.navbar-brand{
-    margin-left: 20px;
-}
-.navbar-nav{
-    margin-right: 20px;
-}
-
 .jumbotron{
     height: auto;
 }
-.row{
+
+.row-jumb{
     margin-top: -35px;
 }
+
+hr{
+    border: 3px dashed black;
+}
+
 img{
     width: 350px;
     height: 350px;
     position: relative;
     opacity: 1;
-   
 }
+
 .fadeinleft{
     animation: fadeinleft;
     animation-duration: 4s;
@@ -29,6 +27,24 @@ img{
       0% {
         opacity: 0;
         transform: translateX(-250px);
+     }
+  
+     100% {
+        opacity: 1;
+        transform: translateX(0);
+     }    
+}
+
+.fadeinright{
+    animation: fadeinright;
+    animation-duration: 4s;
+    animation-iteration-count: 1s;
+}
+@keyframes fadeinright {
+      /* 40% would be 3secs, 60% 4.5 secs */
+      0% {
+        opacity: 0;
+        transform: translateX(250px);
      }
   
      100% {

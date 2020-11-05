@@ -19,11 +19,8 @@
 }
 
 .imgheaderup{
-    margin-top: 50px;
-    width: 340px;
-    height: 420px;
+    margin-top: -80px;
     opacity: 1;
-    border-radius: 50px;
 }
 
 .fadeinup{

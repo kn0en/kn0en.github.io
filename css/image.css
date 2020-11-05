@@ -12,7 +12,30 @@
 .row{
     margin-top: -35px;
 }
-.img-fluid{
+img{
     width: 350px;
     height: 350px;
+    position: relative;
+    opacity: 1;
+   
 }
+.fadeinleft{
+    animation: fadeinleft;
+    animation-duration: 4s;
+    animation-iteration-count: 1s;
+}
+@keyframes fadeinleft {
+      /* 40% would be 3secs, 60% 4.5 secs */
+      0% {
+        opacity: 0;
+        transform: translateX(-250px);
+     }
+  
+     100% {
+        opacity: 1;
+        transform: translateX(0);
+     }    
+}
+
+
+

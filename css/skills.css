@@ -1,0 +1,13 @@
+
+  
+  .skills {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+  }
+  
+  .htmls {width: 90%; background-color: #4CAF50;}
+  .csss {width: 80%; background-color: #2196F3;}
+  .jss {width: 65%; background-color: #f44336;}
+  .phps {width: 60%; background-color: #808080;}

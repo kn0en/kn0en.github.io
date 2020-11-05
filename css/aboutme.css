@@ -1,10 +1,45 @@
 .aboutme{
     background-color: rgb(153, 201, 255);
-    height: 500px;
+    height: auto;
 }
 
 .row-left{
     color: rgb(54, 54, 54);
     margin-top: 20px;
     margin-left: 20px;
+}
+
+.row-about{
+    margin-top: -30px;
+}
+
+.row-p{
+    padding: 20px;
+    text-align: justify;
+}
+
+.imgheaderup{
+    margin-top: 50px;
+    width: 340px;
+    height: 420px;
+    opacity: 1;
+    border-radius: 50px;
+}
+
+.fadeinup{
+    animation: fadeinup;
+    animation-duration: 3s;
+    animation-iteration-count: 1s;
+}
+@keyframes fadeinup {
+      /* 40% would be 3secs, 60% 4.5 secs */
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+     }
+  
+     100% {
+        opacity: 1;
+        transform: translateX(0);
+     }    
 }

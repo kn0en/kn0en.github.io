@@ -3,9 +3,9 @@
     height: auto;
 }
 
-.row-left{
-    color: rgb(54, 54, 54);
-    margin-top: 20px;
+.text-aboutme-left{
+    margin-top: -30px;
+    margin-bottom: 50px;
     margin-left: 20px;
     
 }
@@ -14,13 +14,16 @@
     margin-top: -30px;
 }
 
-.row-p{
+.text-aboutme-p{
     padding: 20px;
     text-align: justify;
 }
 
+.col-about{
+    margin-top: -30px;
+}
+
 .imgheaderup{
-    margin-top: -80px;
     opacity: 1;
 }
 

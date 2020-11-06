@@ -10,7 +10,7 @@ function move() {
     var id2 = setInterval(frame2, 25);
     var id3 = setInterval(frame3, 20);
     function frame() {
-      if (width >= 90) {
+      if (width >= 78) {
         clearInterval(id);
         i = 0;
       } else {

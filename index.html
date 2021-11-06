@@ -1,256 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My BASE</title>
-
-    <!-- css -->
+    <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/jumbotron.css">
-    <link rel="stylesheet" href="css/aboutme.css">
-    <link rel="stylesheet" href="css/skillme.css">
 
 </head>
 
-<header>
-
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link navlink" onclick="" href="#"></i>Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link navlink" onclick="openNav(event,'aboutMe')" href="#aboutMe">About me</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link navlink" onclick="openNav(event,'experienceMe')" href="#experienceMe">Experiences</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link navlink" onclick="openNav(event,'skillMe')" href="#skillMe">Skills</a>
-          </li>
-        <li class="nav-item">
-          <a class="nav-link navlink" onclick="openNav(event,'contactMe')" href="#contactMe">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-</header>
 <body>
-    <!-- content -->
-    <div class="jumbotron">
-        <div class="row row-jumb">
-            <div class="col-lg-6">
-                <img src="img/header1.png" class="imgheaderleft fadeinleft img-fluid rounded mx-auto d-block rounded-sm" alt="Responsive image">
-            </div>
-            <div class="col-lg-6 col-jumb">
-                <h1 id="helloWorld" class="display-4"></h1>
-                <p id="descP" class="lead"></p>
-                <hr class="my-4">
-                <p class="p-jumb">If you believe in my abilities, and are ready to work with me, please press the button below for more.</p>
-                <a class="btn btn-outline-primary btn-lg" href="https://wa.link/1zhaxh" target="_blank" role="button">Hire me!</a>
-            </div>
-          </div>
-      </div>
-
-      <div class="block"></div>
-
-      <!-- about -->
-      <div id="aboutMe" class="jumbotron aboutme navcontent">
-        <h1 class="text-lg-left text-aboutme-left">About Me</h1>
-            <div class="row row-about">
-              <div class="col-lg-6">
-                  <p class="text-aboutme-p">
-                    My name is Oktavian Yudha Pratama,
-                    I am 24 years old and I am Muslim. 
-                    I graduated from State Polytechnic of Malang, Department of Information Technology, D3 Informatics Management Study Program in 2020. 
-                    I have knowledge in technology, especially programming. 
-                    I am committed to doing quality work, 
-                    I am used to working alone and in a team, and 
-                    I have good time management skills.
-                  </p>
-              </div>
-              <div class="col-lg-6">
-                <img src="img/logo2.png" class="imgheaderup fadeinup img-fluid rounded mx-auto d-block rounded-sm" alt="Responsive image">
-              </div>
-            </div>
-      </div>
-
-      <div class="block"></div>
-
-      <!-- experiences -->
-      <div id="experienceMe" class="jumbotron aboutme navcontent">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h1 class="row-left">Experiences</h1>
+    <div class="container">
+        <div class="background"></div>
+        <div id="curve" class="card">
+            <div class="footer">
+                <div class="connections">
                 </div>
-                <div class="col-lg-6">
+                <svg id="curve">
+                    <path id="p" d="M0,200 Q80,100 400,200 V150 H0 V50" transform="translate(0 300)" />
+                    <rect id="dummyRect" x="0" y="0" height="450" width="400" fill="transparent" />
+                    <!-- slide up-->
+                    <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,100 400,50 V150 H0 V50" fill="freeze"
+                        begin="dummyRect.mouseover" end="dummyRect.mouseout" dur="0.1s" id="bounce1" />
+                    <!-- slide up and curve in -->
+                    <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,0 400,50 V150 H0 V50" fill="freeze"
+                        begin="bounce1.end" end="dummyRect.mouseout" dur="0.15s" id="bounce2" />
+                    <!-- slide down and curve in -->
+                    <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,80 400,50 V150 H0 V50" fill="freeze"
+                        begin="bounce2.end" end="dummyRect.mouseout" dur="0.15s" id="bounce3" />
+                    <!-- slide down and curve out -->
+                    <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,45 400,50 V150 H0 V50" fill="freeze"
+                        begin="bounce3.end" end="dummyRect.mouseout" dur="0.1s" id="bounce4" />
+                    <!-- curve in -->
+                    <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,50 400,50 V150 H0 V50" fill="freeze"
+                        begin="bounce4.end" end="dummyRect.mouseout" dur="0.05s" id="bounce5" />
 
+                    <animate xlink:href="#p" attributeName="d" to="M0,200 Q80,100 400,200 V150 H0 V50" fill="freeze"
+                        begin="dummyRect.mouseout" dur="0.15s" id="bounceOut" />
+                </svg>
+                <div class="info text-center">
+                    <div class="name">Oktavian Yudha Pratama</div>
+                    <div class="job">Script Kiddies</div>
                 </div>
             </div>
-      </div>
-
-      <div class="block"></div>
-
-      <!-- skills -->
-      <div id="skillMe" class="jumbotron skillme navcontent">
-        <h1 class="text-lg-center text-skillme-center">Skills</h1>
-            <div class="row row-skillme">
-                <div class="col-md-3">
-                    <h3 class="text-skillme-p">Programming languages</h3>
-                    <div class="skillme-p">
-                      <p>Android (Java)</p>
-                      <div>
-                        <div id="progress1" class="skills html">78%</div>
-                      </div>
-
-                      <p>CodeIgniter (PHP)</p>
-                      <div>
-                        <div id="progress4" class="skills php">60%</div>
-                      </div>
-
-                      <p>HTML</p>
-                      <div>
-                        <div id="progress2" class="skills css">75%</div>
-                      </div>
-
-                      <p>CSS</p>
-                      <div>
-                        <div id="progress2" class="skills css">75%</div>
-                      </div>
-  
-                      <p>JavaScript</p>
-                      <div>
-                        <div id="progress3" class="skills js">65%</div>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                  <h3 class="text-skillme-p">Framework & Tools</h3>
-                  <div class="skillme-p">
-                    <p>Android (Java)</p>
-                    <div>
-                      <div id="progress1" class="skills html">78%</div>
-                    </div>
-
-                    <p>CodeIgniter (PHP)</p>
-                    <div>
-                      <div id="progress4" class="skills php">60%</div>
-                    </div>
-
-                    <p>HTML</p>
-                    <div>
-                      <div id="progress2" class="skills css">75%</div>
-                    </div>
-
-                    <p>CSS</p>
-                    <div>
-                      <div id="progress2" class="skills css">75%</div>
-                    </div>
-
-                    <p>JavaScript</p>
-                    <div>
-                      <div id="progress3" class="skills js">65%</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <h3 class="text-skillme-p">OS Platforms</h3>
-                  <div class="skillme-p">
-                    <p>Android (Java)</p>
-                    <div>
-                      <div id="progress1" class="skills html">78%</div>
-                    </div>
-
-                    <p>CodeIgniter (PHP)</p>
-                    <div>
-                      <div id="progress4" class="skills php">60%</div>
-                    </div>
-
-                    <p>HTML</p>
-                    <div>
-                      <div id="progress2" class="skills css">75%</div>
-                    </div>
-
-                    <p>CSS</p>
-                    <div>
-                      <div id="progress2" class="skills css">75%</div>
-                    </div>
-
-                    <p>JavaScript</p>
-                    <div>
-                      <div id="progress3" class="skills js">65%</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <h3 class="text-skillme-p">Databases</h3>
-                  <div class="skillme-p">
-                    <p>Android (Java)</p>
-                    <div>
-                      <div id="progress1" class="skills html">78%</div>
-                    </div>
-
-                    <p>CodeIgniter (PHP)</p>
-                    <div>
-                      <div id="progress4" class="skills php">60%</div>
-                    </div>
-
-                    <p>HTML</p>
-                    <div>
-                      <div id="progress2" class="skills css">75%</div>
-                    </div>
-
-                    <p>CSS</p>
-                    <div>
-                      <div id="progress2" class="skills css">75%</div>
-                    </div>
-
-                    <p>JavaScript</p>
-                    <div>
-                      <div id="progress3" class="skills js">65%</div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-      </div>
-
-      <div class="block"></div>
-
-</body>
-<footer>
-
-   <!-- contact -->
-   <div id="contactMe" class="jumbotron aboutme navcontent">
-    <div class="row">
-        <div class="col-lg-6">
-            <h1 class="row-left">Contact</h1>
-        </div>
-        <div class="col-lg-6">
-
+            <div class="card-blur"></div>
         </div>
     </div>
-</div>
-<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-up"></i></button>
-</footer>
+</body>
 
-<!-- javascript -->
 <script src="js/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+</script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/navbar.js"></script>
-<script src="js/typewriter.js"></script>
-<script src="js/scrolltoup.js"></script>
-<script src="js/skills.js"></script>
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-  </body>
 </html>

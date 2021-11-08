@@ -7,45 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ma World's</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
-<body>
-    <div class="container">
-        <div class="background"></div>
-        <div id="curve" class="card">
-            <div class="footer">
-                <div class="connections">
-                </div>
-                <svg id="curve">
-                    <path id="p" d="M0,200 Q80,100 400,200 V150 H0 V50" transform="translate(0 300)" />
-                    <rect id="dummyRect" x="0" y="0" height="450" width="400" fill="transparent" />
-                    <!-- slide up-->
-                    <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,100 400,50 V150 H0 V50" fill="freeze"
-                        begin="dummyRect.mouseover" end="dummyRect.mouseout" dur="0.1s" id="bounce1" />
-                    <!-- slide up and curve in -->
-                    <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,0 400,50 V150 H0 V50" fill="freeze"
-                        begin="bounce1.end" end="dummyRect.mouseout" dur="0.15s" id="bounce2" />
-                    <!-- slide down and curve in -->
-                    <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,80 400,50 V150 H0 V50" fill="freeze"
-                        begin="bounce2.end" end="dummyRect.mouseout" dur="0.15s" id="bounce3" />
-                    <!-- slide down and curve out -->
-                    <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,45 400,50 V150 H0 V50" fill="freeze"
-                        begin="bounce3.end" end="dummyRect.mouseout" dur="0.1s" id="bounce4" />
-                    <!-- curve in -->
-                    <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,50 400,50 V150 H0 V50" fill="freeze"
-                        begin="bounce4.end" end="dummyRect.mouseout" dur="0.05s" id="bounce5" />
 
-                    <animate xlink:href="#p" attributeName="d" to="M0,200 Q80,100 400,200 V150 H0 V50" fill="freeze"
-                        begin="dummyRect.mouseout" dur="0.15s" id="bounceOut" />
-                </svg>
-                <div class="info text-center">
-                    <div class="name">Oktavian Yudha Pratama</div>
-                    <div class="job">Script Kiddies</div>
-                </div>
+<!-- Template Script by Yaroslavw -->
+
+<body>
+
+    <div class="card">
+        <div class="image">
+            <img src="/img/logo2.png" />
+        </div>
+        <div class="details">
+            <div class="center">
+                <h1>Oktavian Yudha Pratama<br><span>" Web Developer "</span></h1>
+                <p>Find me on</p>
+                <ul>
+                    <li><a href="https://github.com/kn0en" target="_new"><i class="fa fa-github"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/oktavian-y-ba4202169/" target="_new"><i
+                                class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="https://instagram.com/_kn0en.exe/" target="_new"><i class="fa fa-instagram"
+                                aria-hidden="true"></i></a></li>
+                </ul>
+      
+                <p>Hire me on</p>
+                <a href="https://fastwork.id/user/progser21" target="_new"><span>FASTWORK.ID</span></a>
             </div>
-            <div class="card-blur"></div>
         </div>
     </div>
 </body>
